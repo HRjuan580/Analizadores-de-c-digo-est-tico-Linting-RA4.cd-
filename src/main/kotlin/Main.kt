@@ -8,7 +8,6 @@ import io.ktor.features.*
 import io.ktor.serialization.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
-
 // Importaciones estándar de Java y Kotlin
 import java.sql.DriverManager
 import java.time.LocalDateTime
