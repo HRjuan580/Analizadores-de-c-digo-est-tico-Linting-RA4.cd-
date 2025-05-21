@@ -1,5 +1,6 @@
 plugins {
-    kotlin("jvm") version "2.0.20"
+    kotlin("jvm") version "2.0.20" // Plugin Kotlin
+    id("io.gitlab.arturbosch.detekt") version "1.23.1" // Plugin Detekt
 }
 
 group = "org.example"
@@ -16,10 +17,13 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
 kotlin {
     jvmToolchain(21)
 }
 
-plugins {
-    id("io.gitlab.arturbosch.detekt") version "1.23.1"
+// Configuración de Detekt (fuera del bloque plugins)
+detekt {
+    buildUponDefaultConfig = true // Usa la configuración por defecto
+    config = files("config/detekt/detekt.yml") // Si tienes un archivo de configuración personalizado
 }
