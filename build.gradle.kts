@@ -19,3 +19,7 @@ tasks.test {
 kotlin {
     jvmToolchain(21)
 }
+
+plugins {
+    id("io.gitlab.arturbosch.detekt") version "1.23.1"
+}
